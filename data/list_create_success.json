@@ -1,0 +1,10 @@
+{
+    "error": null,
+    "message": "List created with success",
+    "data": {
+        "list": {
+            "id": 12,
+            "name": "superlist"
+        }
+    }
+}
