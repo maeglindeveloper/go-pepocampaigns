@@ -71,6 +71,10 @@ func (c *Client) call(ctx context.Context, method string, endpoint string, param
 		request.Header.Set("Content-Type", "application/json")
 	}
 	resp, err := c.client.Do(request)
+	if err != nil {
+		return err
+	}
+
 	err = json.NewDecoder(resp.Body).Decode(&response)
 	if err != nil {
 		return err
